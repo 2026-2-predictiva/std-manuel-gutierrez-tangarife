@@ -7,6 +7,7 @@ FOLDER = "PRE_02_regresion_basica"
 
 
 def test_01():
+    
 
     dataset = pd.read_csv(f"{FOLDER}/data/auto_mpg.csv")
     dataset = dataset.dropna()
