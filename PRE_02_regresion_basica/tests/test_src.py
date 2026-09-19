@@ -11,9 +11,9 @@ def test_01():
 
     dataset = pd.read_csv(f"{FOLDER}/data/auto_mpg.csv")
     dataset = dataset.dropna()
-    dataset["Origin"] = dataset["Origin"].map(
-        {1: "USA", 2: "Europe", 3: "Japan"},
-    )
+    #dataset["Origin"] = dataset["Origin"].map(
+    #    {1: "USA", 2: "Europe", 3: "Japan"},
+    #)
     dataset = pd.get_dummies(dataset, columns=["Origin"], prefix="", prefix_sep="")
     y_true = dataset.pop("MPG")
 
